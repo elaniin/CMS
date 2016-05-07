@@ -1,0 +1,9 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+RewriteRule m/(.*)/(.*) index.php?module=$1&page=$2
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+
+
+
