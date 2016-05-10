@@ -60,7 +60,7 @@ if ($session) {
         $passmd5 = md5("NWLXCDxPHEM8AANvYxuC5DWS");
         $data = array( 
               "name" => "'$name'", 
-              "level" => 2, 
+              "level" => DEFAULT_LEVEL, 
               "password" => "'$passmd5'", 
               "email" => "'$email'", 
               "join_date" => "'".date("Y-m-d H:i:s",time())."'",

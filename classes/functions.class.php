@@ -115,8 +115,21 @@ class Functions
 		    return $new_array;
 		}		    
 
+	/*
 
-
+		Function Array Sort
+    
+    */	
+	public	function randomString()
+		{
+			$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		    $randomString = '';
+		    for ($i = 0; $i < 32; $i++) {
+		        $randomString .= $characters[rand(0, strlen($characters) - 1)];
+		    }
+		    return $randomString;
+		}
+	
 
 
 

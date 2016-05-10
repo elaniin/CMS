@@ -27,6 +27,12 @@ $lan = array(
     "reset_password_subject" => "Your new password.",
     "reset_password_content" => "Hi <strong>{name}</strong>,<br><br>Your new password is:  {passtemp} <br><br>",
 
+    "add_new" => "Add New",
+    "save" => "Save",
+    "modules" => "Modules",
+    "add_success" => "Awesome! Element added successfully.",
+
+
 
 );
 

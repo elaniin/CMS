@@ -14,6 +14,7 @@ $lan = array(
     "forgot_password_description" => "Puedes reinicar tu contraseña.",
     "login" => "Iniciar Sesión",
     "sign_in_with" => "Iniciar sesión con",
+    "phone" => "Teléfono",
     "email" => "Correo electrónico",
     "password" => "Contraseña",
     "password_again" => "Contraseña de nuevo",
@@ -29,7 +30,26 @@ $lan = array(
 
     "profile" => "Perfil",
     "my_account" => "Mi Cuenta",
+    "my_account_details" => "Edita los detalles de tu cuenta.",
+
     "logout" => "Cerrar Sesión",
+    "add_new" => "Agregar Nuevo",
+    "save" => "Guardar",
+    "modules" => "Modulos",
+    "add_success" => "Perfecto! Elemento agregado con exito.",
+    "delete_success" => "Perfecto! Elemento eliminado con exito.",
+    "update_success" => "Perfecto! Elemento actualizado con exito.",
+    "are_you_sure" => "¿Estas seguro?",
+    
+    "api_details" => "Nuestra API proporciona herramientas flexibles que se pueden utilizar en la creación de nuevos proyectos.",
+    "credentials" => "Credenciales",
+    "conf" => "Configuración",
+    "conf_details" => "Configura desde aqui los aspectos basicos del sistema y habilita funcionalidades especiales.",
+    "database" => "Base de datos",
+    "advance" => "Avanzado",
+
+
+
 
 );
 

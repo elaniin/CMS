@@ -47,6 +47,9 @@ if ($_SESSION['user']) {
 	}else {
 	  $avatar = $user->google_picture;
 	}
+
+	$datarow = $db->select("levels","id = $user->level");
+	$modulesthislevel = json_decode($datarow[0]['modules']);
 }
 
 //get modules with settings and languages of each one
@@ -73,8 +76,9 @@ foreach ($modulesdirectory as $key => $value) {
 	}
 }
 
-
 $allmodule = $functions->array_sort($allmodule, 'order', SORT_ASC);
+
+
 
 
 

@@ -65,7 +65,7 @@ if (isset($authUrl)){
 			$passmd5 = md5("NWLXCDxPHEM8AANvYxuC5DWS");
 			$data = array( 
 		        "name" => "'$google_user->name'", 
-		        "level" => 2, 
+		        "level" => DEFAULT_LEVEL, 
 		        "password" => "'$passmd5'", 
 		        "email" => "'$google_user->email'", 
 		        "join_date" => "'".date("Y-m-d H:i:s",time())."'",

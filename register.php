@@ -27,7 +27,7 @@ if(isset($_POST['email'])) {
       $data['name'] = $name;
       $data['password'] = md5($password);
       $data['email'] = $email;
-      $data['level'] = 2;
+      $data['level'] = DEFAULT_LEVEL;
       $data['phone'] = "";
       $newUser = new User($data);
       $newUser->save(true);

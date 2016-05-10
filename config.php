@@ -1,15 +1,15 @@
 <?php
 /*
-	Configurations
+  Configurations
 */
 
 //General
 define('BASE_URL', 'http://toolboxsv.com/dev/CMS/1');
-define('NAME', 'EconoParts');
-define('SLOGAN', 'Sistema de evaluación');
+define('NAME', 'Elaniin CMS');
+define('SLOGAN', 'Our open-source platform');
 define('P_EMAIL', 'cms@toolboxsv.com');
 define('LOGO', 'http://toolboxsv.com/dev/CMS/1/img/logo.png');
-define('COLOR', '#EA212E');
+define('COLOR', '#E91E63');
 define('LANGUAGE', 'es');
 
 define('TIMEZONE', 'America/El_Salvador');
@@ -17,11 +17,10 @@ define('TIMEZONE', 'America/El_Salvador');
 define('FORCE_HTTPS', 0);
 
 //Database Info
-define('DATABASE_NAME', 'syncfont_main');	
-define('DATABASE_USER', 'syncfont_admin');	
-define('DATABASE_PASS', 'Fl$Sdy51Gzq!');	
-define('DATABASE_HOST', 'localhost');	
-
+define('DATABASE_NAME', 'syncfont_main'); 
+define('DATABASE_USER', 'syncfont_admin');
+define('DATABASE_PASS', 'Fl$Sdy51Gzq!');
+define('DATABASE_HOST', 'localhost'); 
 
 //Normal Register
 define('NLOGIN_ENABLE', 1);
@@ -42,8 +41,8 @@ define('FLOGIN_APP_SECRET', '42e4ebdf9d71b15daf9066a9384424f9');
 
 //Advance Settings
 //If you not sure what happend here not change nothing.
-define('DEFAULT_MODULE', "general");
-define('DEFAULT_PAGE', "home");
-
+define('DEFAULT_MODULE', 'general');
+define('DEFAULT_PAGE', 'home');
+define('DEFAULT_LEVEL', '2');
 
 ?>
