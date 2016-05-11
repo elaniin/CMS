@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?=NAME?> - <?=SLOGAN?></title>
   <link href="<?=BASE_URL?>/assets/css/root.css" rel="stylesheet">
+  <link href="<?=BASE_URL?>/custom/custom.css" rel="stylesheet">
   <style>
     #top {
         background: <?=COLOR?>;

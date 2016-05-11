@@ -60,9 +60,13 @@ Bootstrap Date Range Picker
 ================================================ -->
 <script type="text/javascript" src="<?=BASE_URL?>/assets/js/date-range-picker/daterangepicker.js"></script>
 
+<!-- ================================================
+Custom
+================================================ -->
+<script type="text/javascript" src="<?=BASE_URL?>/custom/custom.js"></script>
+
  
  <script>
-
 function confirmDelete(delUrl) {
   if (confirm("<?=$lan["are_you_sure"]?>")) {
     document.location = delUrl;
@@ -71,26 +75,6 @@ function confirmDelete(delUrl) {
 
 $(document).ready(function()
 {
-  var height = $( window ).height();
-  if ( $( ".presentation" ).length ) { 
-    height = height - 526
-  } else{
-    height = height - 216  
-  }
-  $(".container-padding").css("min-height", height);
-  $(".container-default").css("min-height", height);
-
-  $(window).on('resize', function(){
-    var height = $( window ).height();
-    if ( $( ".presentation" ).length ) { 
-      height = height - 526
-    } else{
-      height = height - 216  
-    }
-    $(".container-padding").css("min-height", height);
-    $(".container-default").css("min-height", height);
-  });
-
 
 <?php
 

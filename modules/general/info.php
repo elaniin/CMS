@@ -6,6 +6,6 @@
 	$module_url = BASE_URL;
 	$module_script = "modules/general/scripts.php";
 	$module_type = "single";
-	$module_cron = 1; 
+	$module_cron = 43200;  //run cron job every 43,200 seconds = 12 hours
 
 ?>

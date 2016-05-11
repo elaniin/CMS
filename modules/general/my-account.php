@@ -32,7 +32,7 @@ if(isset($_POST['submit-form'])) {
 
 
 <!-- START CONTAINER -->
-<div class="container-padding">
+<div class="container-padding margin-b-50">
     <div class="row">
 <div class="col-md-12 padding-0">
       <div class="panel panel-transparent" style="margin-top:-87px;">

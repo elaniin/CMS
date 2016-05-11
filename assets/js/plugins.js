@@ -186,3 +186,28 @@ $(window).load(function() {
 /* Update Fixed */
 /* Version 1.2 */
 $('.profilebox').on('click',function(){ $(".sidepanel").hide(); })
+
+/* Custom JS */
+
+$(document).ready(function()
+{
+  var height = $( window ).height();
+  if ( $( ".presentation" ).length ) { 
+    height = height - 526
+  } else{
+    height = height - 216  
+  }
+  $(".container-padding").css("min-height", height);
+  $(".container-default").css("min-height", height);
+
+  $(window).on('resize', function(){
+    var height = $( window ).height();
+    if ( $( ".presentation" ).length ) { 
+      height = height - 526
+    } else{
+      height = height - 216  
+    }
+    $(".container-padding").css("min-height", height);
+    $(".container-default").css("min-height", height);
+  });
+});  

@@ -61,7 +61,7 @@ if($mode=="reset"){
 
 
 <!-- START CONTAINER -->
-<div class="container-default">
+<div class="container-default margin-b-50">
     <div class="row">
       <div class="col-md-12">
         <div class="panel panel-default">

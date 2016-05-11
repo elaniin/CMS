@@ -14,10 +14,11 @@ if (FORCE_HTTPS == 1) {
 }
 
 //classes needed
+require_once 'classes/DB.class.php';
 require_once 'classes/User.class.php';  
 require_once 'classes/UserTools.class.php';
 require_once 'classes/functions.class.php';  
-require_once 'classes/DB.class.php';
+require_once 'custom/custom.class.php';  
 
 
 session_start(); 
@@ -37,16 +38,23 @@ $userTools = new UserTools();
 //initialize Functions object  
 $functions = new Functions();  
 
+//initialize Custom Functions object  
+$customfunc = new CustomFunctions(); 
+
 //get user loggin info
 if ($_SESSION['user']) {
 	$user = $_SESSION['user']; 
 	$userid = $user->id;
 	$useremail = $user->email;
-	if ($user->google_picture == "") {
-	  $avatar = $user->facebook_picture;
-	}else {
-	  $avatar = $user->google_picture;
+	
+	if (!empty($user->google_picture)) {
+		$avatar = $user->google_picture; 
+	}elseif (!empty($user->facebook_picture)) {
+		$avatar = $user->facebook_picture;
+	}else{
+		$avatar = BASE_URL."/img/avatar_default.jpg";
 	}
+	
 
 	$datarow = $db->select("levels","id = $user->level");
 	$modulesthislevel = json_decode($datarow[0]['modules']);
@@ -77,10 +85,6 @@ foreach ($modulesdirectory as $key => $value) {
 }
 
 $allmodule = $functions->array_sort($allmodule, 'order', SORT_ASC);
-
-
-
-
 
 
 ?>

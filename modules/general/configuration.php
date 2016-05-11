@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST['submit-form'])) {
-
+//save the config file
 $fp = fopen('config.php','w');
 $data = "<?php
 /*
@@ -53,7 +53,19 @@ define('DEFAULT_LEVEL', '$DEFAULT_LEVEL');
   fwrite($fp, $data);
   fclose($fp);
 
+//save the custom css
+$fp = fopen('custom/custom.css','w');
+fwrite($fp, $custom_css);
+fclose($fp);
+//save the custom js
+$fp = fopen('custom/custom.js','w');
+fwrite($fp, $custom_js);
+fclose($fp);
+
 }
+
+$custom_css = file_get_contents("custom/custom.css");
+$custom_js = file_get_contents("custom/custom.js");
 ?>
 <!-- START CONTENT -->
 <div class="content">
@@ -74,7 +86,7 @@ define('DEFAULT_LEVEL', '$DEFAULT_LEVEL');
 
 
 <!-- START CONTAINER -->
-<div class="container-padding">
+<div class="container-padding  margin-b-50">
     <div class="row">
 <div class="col-md-12 padding-0">
       <div class="panel panel-transparent" style="margin-top:-87px;">
@@ -88,6 +100,8 @@ define('DEFAULT_LEVEL', '$DEFAULT_LEVEL');
                     <li role="presentation" class=""><a href="#database" aria-controls="database" role="tab" data-toggle="tab" class="" aria-expanded="false"><?=$lan["database"]?></a></li>
                     <li role="presentation" class=""><a href="#users" aria-controls="users" role="tab" data-toggle="tab" class="" aria-expanded="false"><?=$lan["users"]?></a></li>
                     <li role="presentation" class=""><a href="#advance" aria-controls="advance" role="tab" data-toggle="tab" class="" aria-expanded="false"><?=$lan["advance"]?></a></li>
+                    <li role="presentation" class=""><a href="#css" aria-controls="css" role="tab" data-toggle="tab" class="" aria-expanded="false">CSS</a></li>
+                    <li role="presentation" class=""><a href="#js" aria-controls="js" role="tab" data-toggle="tab" class="" aria-expanded="false">JS</a></li>
                   </ul>
 
                   <!-- Tab panes -->
@@ -299,6 +313,28 @@ define('DEFAULT_LEVEL', '$DEFAULT_LEVEL');
                         </div>
                       </div>
                     </div>
+
+                    <div role="tabpanel" class="tab-pane" id="css">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="input1" class="form-label">Custom CSS</label>
+                            <textarea class="form-control" name="custom_css" rows="20"><?=$custom_css?></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="js">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                          <label for="input1" class="form-label">Custom JS</label>
+                            <textarea class="form-control" name="custom_js" rows="20"><?=$custom_js?></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
 
                 </div>              

@@ -47,6 +47,10 @@ $lan = array(
     "conf_details" => "Configura desde aqui los aspectos basicos del sistema y habilita funcionalidades especiales.",
     "database" => "Base de datos",
     "advance" => "Avanzado",
+    "level" => "Nivel",
+    "general" => "General",
+    "join_date" => "Fecha de registro",
+    "cancel" => "Cancelar",
 
 
 

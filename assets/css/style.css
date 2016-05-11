@@ -4384,3 +4384,8 @@ a.btn.btn-primary.btn-block.sociallogin {
 a.btn.btn-primary.btn-block.sociallogin:hover {
     background: rgba(57, 87, 155, 0.88);
 }
+.avatarlist {
+    width: 30px;
+    border-radius: 40px;
+    margin-right: 8px;
+}
