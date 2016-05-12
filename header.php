@@ -44,6 +44,9 @@
         <a href="<?=BASE_URL?>/m/general/configuration" class="notifications"><i class="fa fa-cog"></i></a>
       </li>
       <li class="link">
+        <a href="<?=BASE_URL?>/m/general/db-backups" class="notifications"><i class="fa fa-database"></i></a>
+      </li>
+      <li class="link">
         <a href="<?=BASE_URL?>/m/general/api" class="notifications"><i class="fa fa-code-fork"></i></a>
       </li>
     <?php

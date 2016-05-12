@@ -4,6 +4,7 @@
 */
 require_once 'global.inc.php'; 
 
+
 $module = $_GET["module"];
 $page = $_GET["page"];
 if ($module == "" OR $page == "") {

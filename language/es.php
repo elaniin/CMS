@@ -22,7 +22,7 @@ $lan = array(
     "email_exists" => "Este email ya esta registrado.",
     "password_not_match" => "Las contraseñas no coinciden.",
     "register_email_subject" => "Bienvenido a {name}.",
-    "register_email_content" => "Hola {name}. <br> Te damos la bienvenida a nuestro sistema, tu cuenta ha sido creada bajo el correo {email}, si tienes alguna duda no dudes en contactarnos. <br> Esperamos verte pronto.<br> Saludos",
+    "register_email_content" => "Hola <b>{name}</b>. <br><br> Te damos la bienvenida a nuestro sistema, tu cuenta ha sido creada bajo el correo <b>{email}</b>, si tienes alguna duda no dudes en contactarnos. <br><br>Esperamos verte pronto.<br> Saludos",
     "reset_password_error" => "El email no existe en nuestra base de datos.",
     "reset_password_success" => "Revisa tu email para la nueva contraseña.",
     "reset_password_subject" => "Tu nueva contraseña.",
@@ -51,6 +51,14 @@ $lan = array(
     "general" => "General",
     "join_date" => "Fecha de registro",
     "cancel" => "Cancelar",
+    "db_backups" => "Respaldos Base de Datos",
+    "db_backups_details" => "Automáticamente se genera un backup de toda la base de datos cada 12 horas.",
+    "db_backups_details_2" => "Puedes encontrar todos los respaldos en la carpeta 'backups'",
+    "db_backups_restore" => "Restaurar respaldo",
+    "notification" => "Notificación",
+    "sent_by" => "Enviado por",
+    
+
 
 
 

@@ -82,6 +82,7 @@ if(isset($_POST['email'])) {
         <div class="col-xs-6 text-right"><a href="<?=BASE_URL?>/forgot-password"><i class="fa fa-lock"></i> <?=$lan["forgot_password"]?></a></div>
         <?php } ?>
       </div>
+      <div class="margin-t-40"></div>
     </div>
 
 </body>
