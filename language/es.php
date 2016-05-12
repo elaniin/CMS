@@ -3,7 +3,6 @@
     Español
 */
 
-
 $lan = array(
     "name" => "Nombre",
     "create_account" => "CREAR CUENTA",
@@ -27,12 +26,11 @@ $lan = array(
     "reset_password_success" => "Revisa tu email para la nueva contraseña.",
     "reset_password_subject" => "Tu nueva contraseña.",
     "reset_password_content" => "Hola <strong>{name}</strong>,<br><br>Tu nueva contraseña es:  {passtemp} <br><br>",
-
     "profile" => "Perfil",
     "my_account" => "Mi Cuenta",
     "my_account_details" => "Edita los detalles de tu cuenta.",
-
     "logout" => "Cerrar Sesión",
+    "users" => "Usuarios",
     "add_new" => "Agregar Nuevo",
     "save" => "Guardar",
     "modules" => "Modulos",
@@ -40,7 +38,6 @@ $lan = array(
     "delete_success" => "Perfecto! Elemento eliminado con exito.",
     "update_success" => "Perfecto! Elemento actualizado con exito.",
     "are_you_sure" => "¿Estas seguro?",
-    
     "api_details" => "Nuestra API proporciona herramientas flexibles que se pueden utilizar en la creación de nuevos proyectos.",
     "credentials" => "Credenciales",
     "conf" => "Configuración",
@@ -58,12 +55,7 @@ $lan = array(
     "notification" => "Notificación",
     "sent_by" => "Enviado por",
     "mail" => "Correo",
-    
-
-
-
-
-
+    "installation" => "Instalación",
 );
 
 ?>

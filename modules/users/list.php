@@ -29,7 +29,7 @@ if(isset($_POST['submit-form'])) {
   <div class="page-header">
     <h1 class="title"><?=$lan["users_title"]?></h1>
       <ol class="breadcrumb">
-        <li><a href="<?=BASE_URL?>">Dashboard</a></li>
+        <li><a href="<?=BASE_URL?>/m/users/list"><?=$lan["users_title"]?></a></li>
         <li class="active"><?=$lan["users_title"]?></li>
       </ol>
 

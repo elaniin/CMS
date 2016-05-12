@@ -2,8 +2,12 @@
 /*
 	Global.inc
 */
-require_once 'config.php'; 
-
+if (file_exists('config.php')) {
+	require_once 'config.php'; 
+}else{
+	header("Location: installation");
+	exit();
+}
 date_default_timezone_set(TIMEZONE);
 if (FORCE_HTTPS == 1) {
 	if($_SERVER["HTTPS"] != "on")

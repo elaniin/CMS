@@ -45,7 +45,6 @@ if(isset($_GET['mode'])) {
   <div class="page-header">
     <h1 class="title"><?=$lan["levels_title"]?></h1>
       <ol class="breadcrumb">
-        <li><a href="<?=BASE_URL?>">Dashboard</a></li>
         <li><a href="<?=BASE_URL?>/m/users/list"><?=$lan["users"]?></a></li>
         <li class="active"><?=$lan["levels_title"]?></li>
       </ol>

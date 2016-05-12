@@ -1,0 +1,44 @@
+CREATE TABLE IF NOT EXISTS `backups` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `filename` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+
+CREATE TABLE IF NOT EXISTS `cron` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `module` varchar(45) NOT NULL,
+  `lastcron` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+
+CREATE TABLE IF NOT EXISTS `levels` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(25) NOT NULL,
+  `modules` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+
+INSERT INTO `levels` (`id`, `name`, `modules`) VALUES
+(1, 'Admin', '["Admin","Delete","Dashboard","Usuarios"]'),
+(2, 'Normal', '["Dashboard"]');
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `level` int(1) NOT NULL,
+  `join_date` datetime NOT NULL,
+  `name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `password` text COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `phone` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `google_id` varchar(75) COLLATE utf8_unicode_ci NOT NULL,
+  `google_link` text COLLATE utf8_unicode_ci NOT NULL,
+  `google_picture` text COLLATE utf8_unicode_ci NOT NULL,
+  `facebook_id` varchar(75) COLLATE utf8_unicode_ci NOT NULL,
+  `facebook_link` text COLLATE utf8_unicode_ci NOT NULL,
+  `facebook_picture` text COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=0 ;
