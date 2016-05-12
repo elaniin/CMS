@@ -89,7 +89,10 @@ define('DEFAULT_LEVEL', '1');
 ?>";
           fwrite($fp, $data);
           fclose($fp);
-
+        //create custom directory
+        if (!file_exists('custom')) {
+            mkdir('custom', 0777, true);
+        }
         //create custom css
         $fp = fopen('custom/custom.css','w');
         fwrite($fp, "");
