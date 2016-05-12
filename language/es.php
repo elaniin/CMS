@@ -57,6 +57,7 @@ $lan = array(
     "db_backups_restore" => "Restaurar respaldo",
     "notification" => "Notificación",
     "sent_by" => "Enviado por",
+    "mail" => "Correo",
     
 
 

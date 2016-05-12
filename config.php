@@ -22,6 +22,12 @@ define('DATABASE_USER', 'syncfont_admin');
 define('DATABASE_PASS', 'Fl$Sdy51Gzq!');
 define('DATABASE_HOST', 'localhost'); 
 
+
+//Mail
+define('MAIL_TYPE', 1);  // 1 = Server Default / 2 = Mandrill / 3 = SendGrid
+define('MAIL_MANDRILL_KEY', "");
+define('MAIL_SENDGRID_KEY', "");
+
 //Normal Register
 define('NLOGIN_ENABLE', 1);
 define('REGISTER_ENABLE', 1);

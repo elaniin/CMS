@@ -69,8 +69,44 @@ class Functions
 		</tbody></table></td>
 		  </tr>
 		</tbody></table>";		
+		if (MAIL_TYPE == 1) { //DEFAULT
+			mail($email,$subject,$template,$headers);
+		}
+		if (MAIL_TYPE == 2) { //MANDRILL
+			require_once('libs/Mandrill.php');
+			try {
+		    $mandrill = new Mandrill(MAIL_MANDRILL_KEY);
+		    $contenttext = strip_tags($template);
+		    $message = array(
+		        'html' => $template,
+		        'text' => $contenttext,
+		        'subject' => $subject,
+		        'from_email' => $bemail,
+		        'from_name' => $bname,
+		        'to' => array(
+		            array(
+		                'email' => $email,
+		                'type' => 'to'
+		            )
+		        ),
+		        'headers' => array('Reply-To' => $bemail),
+		        'track_opens' => 1,
+		        'track_clicks' => 1,
+		        'auto_text' => null,
+		        'auto_html' => null,
+		        'inline_css' => 1,
+		    );
+		    $result = $mandrill->messages->send($message);
+
+			} catch(Mandrill_Error $e) {
+			    echo 'A mandrill error occurred: ' . get_class($e) . ' - ' . $e->getMessage();
+			    throw $e;
+			}
+		}
+		if (MAIL_TYPE == 3) { //SENDGRID
+			
+		}
 		
-		mail($email,$subject,$template,$headers);
 
 	}
 

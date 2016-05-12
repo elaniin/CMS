@@ -26,6 +26,11 @@ define('DATABASE_USER', '$DATABASE_USER');
 define('DATABASE_PASS', '$DATABASE_PASS');
 define('DATABASE_HOST', '$DATABASE_HOST'); 
 
+//Mail
+define('MAIL_TYPE', $MAIL_TYPE);  // 1 = Server Default / 2 = Mandrill / 3 = SendGrid
+define('MAIL_MANDRILL_KEY', '$MAIL_MANDRILL_KEY');
+define('MAIL_SENDGRID_KEY', '$MAIL_SENDGRID_KEY');
+
 //Normal Register
 define('NLOGIN_ENABLE', $NLOGIN_ENABLE);
 define('REGISTER_ENABLE', $REGISTER_ENABLE);
@@ -99,6 +104,7 @@ $custom_js = file_get_contents("custom/custom.js");
                     <li role="presentation" class="active"><a href="#general" aria-controls="general" role="tab" data-toggle="tab" aria-expanded="true" class="active">General</a></li>
                     <li role="presentation" class=""><a href="#database" aria-controls="database" role="tab" data-toggle="tab" class="" aria-expanded="false"><?=$lan["database"]?></a></li>
                     <li role="presentation" class=""><a href="#users" aria-controls="users" role="tab" data-toggle="tab" class="" aria-expanded="false"><?=$lan["users"]?></a></li>
+                    <li role="presentation" class=""><a href="#mail" aria-controls="mail" role="tab" data-toggle="tab" class="" aria-expanded="false"><?=$lan["mail"]?></a></li>
                     <li role="presentation" class=""><a href="#advance" aria-controls="advance" role="tab" data-toggle="tab" class="" aria-expanded="false"><?=$lan["advance"]?></a></li>
                     <li role="presentation" class=""><a href="#css" aria-controls="css" role="tab" data-toggle="tab" class="" aria-expanded="false">CSS</a></li>
                     <li role="presentation" class=""><a href="#js" aria-controls="js" role="tab" data-toggle="tab" class="" aria-expanded="false">JS</a></li>
@@ -280,6 +286,33 @@ $custom_js = file_get_contents("custom/custom.js");
                         </div>
                       </div>
                     </div>
+                    <div role="tabpanel" class="tab-pane" id="mail">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="input1" class="form-label">Default Mail</label>
+                            <select class="selectpicker form-control" name="MAIL_TYPE">
+                            <option value="1"  <?php if ($MAIL_TYPE == 1 OR MAIL_TYPE == 1) { echo "selected"; }?>  >Server Default</option>
+                            <option value="2"  <?php if ($MAIL_TYPE == 2 OR MAIL_TYPE == 2) { echo "selected"; }?>  >Mandrill</option>
+                            <option value="3"  <?php if ($MAIL_TYPE == 3 OR MAIL_TYPE == 3) { echo "selected"; }?>  >SendGrid</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="input1" class="form-label">Mandrill Key</label>
+                            <input type="text" class="form-control" name="MAIL_MANDRILL_KEY" value="<?=MAIL_MANDRILL_KEY?>">
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="input1" class="form-label">SendGrid Key</label>
+                            <input type="text" class="form-control" name="MAIL_SENDGRID_KEY" value="<?=MAIL_SENDGRID_KEY?>">
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
                     <div role="tabpanel" class="tab-pane" id="advance">
                       <div class="row">
                         <div class="col-md-4">
@@ -313,6 +346,7 @@ $custom_js = file_get_contents("custom/custom.js");
                         </div>
                       </div>
                     </div>
+
 
                     <div role="tabpanel" class="tab-pane" id="css">
                       <div class="row">
