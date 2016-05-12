@@ -89,6 +89,10 @@ define('DEFAULT_LEVEL', '1');
 ?>";
           fwrite($fp, $data);
           fclose($fp);
+        //create backups directory
+        if (!file_exists('backups')) {
+            mkdir('backups', 0777, true);
+        }
         //create custom directory
         if (!file_exists('custom')) {
             mkdir('custom', 0777, true);
