@@ -28,10 +28,10 @@ foreach ($allmodule as $key => $value) {
 	}
 }
 
-if (($page == "api" OR $page == "configuration") AND !(in_array("Admin", $modulesthislevel))) {
+if (($page == "api" OR $page == "configuration" OR $page == "db-backups") AND !(in_array("Admin", $modulesthislevel))) {
 	$permission = 0;
 }
-if (($page == "api" OR $page == "configuration") AND (in_array("Admin", $modulesthislevel))) {
+if (($page == "api" OR $page == "configuration" OR $page == "db-backups") AND (in_array("Admin", $modulesthislevel))) {
 	$permission = 1;
 }
 if ($permission == 0) {
