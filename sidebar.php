@@ -23,6 +23,12 @@
                   </li>
                   ";
                 }
+                if ($allmodule[$key]["type"] == "multiple_alone") {
+                  foreach ($allmodule[$key]["sublinks"] as $name => $data) {
+                      echo "<li><a href='".$data["url"]."'><span class='icon'><i class='fa fa-".$data["icon"]."'></i></span>".$data["name"]."</a></li>";
+                  }
+
+                }
               }
             }
           ?>
