@@ -71,7 +71,6 @@ class DB {
             
 			
         }  
-        $functions = new Functions();
         return $sql;  
     }
 
@@ -79,7 +78,6 @@ class DB {
     public function delete($table, $where) {  
             $sql = "DELETE FROM $table WHERE $where";  
             mysql_query($sql) or die(mysql_error());  
-             $functions = new Functions();
         return true;  
     }	
   
