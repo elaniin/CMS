@@ -53,6 +53,7 @@ define('COPYRIGHT', ' ');
 define('TIMEZONE', '$TIMEZONE');
 
 define('FORCE_HTTPS', $FORCE_HTTPS);
+define('AUTO_UPDATE', $AUTO_UPDATE);
 
 //Database Info
 define('DATABASE_NAME', '$DATABASE_NAME'); 
@@ -276,14 +277,20 @@ class CustomFunctions
                             <input type="text" class="form-control" name="LOGO" >
                           </div>
                         </div>
-                         <div class="col-md-4">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="input1" class="form-label">Favicon (PNG URL)</label>
+                            <input type="text" class="form-control" name="FAVICON" >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4">
                           <div class="form-group">
                             <label for="input1" class="form-label">Principal Color</label>
                             <input type="text" class="form-control" name="COLOR" value="#399bff">
                           </div>
                         </div>
-                      </div>
-                      <div class="row">
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="input1" class="form-label">Language</label>
@@ -293,6 +300,14 @@ class CustomFunctions
                             </select> 
                           </div>
                         </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="input1" class="form-label">Copyright</label>
+                            <input type="text" class="form-control" name="COPYRIGHT">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="input1" class="form-label">Timezone</label>
@@ -305,6 +320,15 @@ class CustomFunctions
                             <select class="selectpicker form-control" name="FORCE_HTTPS">
                               <option value="1">Yes</option>
                               <option value="0" selected>No</option>
+                            </select> 
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="input1" class="form-label">Auto Updates</label>
+                            <select class="selectpicker form-control" name="AUTO_UPDATE">
+                              <option value="1" selected>Yes</option>
+                              <option value="0">No</option>
                             </select> 
                           </div>
                         </div>

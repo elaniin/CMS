@@ -4,6 +4,7 @@
 */
 if (file_exists('config.php')) {
 	require_once 'config.php'; 
+	require_once 'version.php'; 
 }else{
 	header("Location: installation");
 	exit();

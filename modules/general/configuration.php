@@ -21,6 +21,7 @@ define('COPYRIGHT', '$COPYRIGHT');
 define('TIMEZONE', '$TIMEZONE');
 
 define('FORCE_HTTPS', $FORCE_HTTPS);
+define('AUTO_UPDATE', $AUTO_UPDATE);
 
 //Database Info
 define('DATABASE_NAME', '$DATABASE_NAME'); 
@@ -76,6 +77,12 @@ echo ' <script> location.replace("configuration"); </script>';
 
 $custom_css = file_get_contents("custom/custom.css");
 $custom_js = file_get_contents("custom/custom.js");
+
+/*check updates
+$update = file_get_contents("http://toolboxsv.com/api/CMS/version.php");
+$update = json_decode($update);
+*/
+
 ?>
 <!-- START CONTENT -->
 <div class="content">
@@ -89,7 +96,6 @@ $custom_js = file_get_contents("custom/custom.js");
       </div>
 
       <div class="col-lg-4 col-md-6">
-
       </div>
 
   </div>  
@@ -196,6 +202,15 @@ $custom_js = file_get_contents("custom/custom.js");
                             <select class="selectpicker form-control" name="FORCE_HTTPS">
                               <option value="1" <?php if (FORCE_HTTPS == 1) { echo "selected"; }?> >Yes</option>
                               <option value="0" <?php if (FORCE_HTTPS == 0) { echo "selected"; }?> >No</option>
+                            </select> 
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="input1" class="form-label">Auto Updates</label>
+                            <select class="selectpicker form-control" name="AUTO_UPDATE">
+                              <option value="1" <?php if (AUTO_UPDATE == 1) { echo "selected"; }?> >Yes</option>
+                              <option value="0" <?php if (AUTO_UPDATE == 0) { echo "selected"; }?> >No</option>
                             </select> 
                           </div>
                         </div>

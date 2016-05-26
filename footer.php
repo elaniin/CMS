@@ -1,13 +1,10 @@
-<?php
-require_once 'version.php'; 
-?>
 <!-- Start Footer -->
 <div class="row footer">
   <div class="col-md-6 text-left">
    <?=COPYRIGHT?>
   </div>
   <div class="col-md-6 text-right">
-    Built using <a href="https://github.com/elaniin/CMS" target="_blank">CMS</a>.
+    Built using <a href="https://github.com/elaniin/CMS" target="_blank"><?=CMS_NAME?></a>.
   </div> 
 </div>
 <!-- End Footer -->
