@@ -4,6 +4,7 @@
 */
 
 require_once 'global.inc.php'; 
+require_once 'credentials.php';
 $time = time();
 
 
