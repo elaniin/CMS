@@ -45,9 +45,11 @@ define('NAME', '$NAME');
 define('SLOGAN', '$SLOGAN');
 define('P_EMAIL', '$P_EMAIL');
 define('LOGO', '$LOGO');
+define('FAVICON', ' ');
 define('COLOR', '$COLOR');
 define('LANGUAGE', '$LANGUAGE');
 
+define('COPYRIGHT', ' ');
 define('TIMEZONE', '$TIMEZONE');
 
 define('FORCE_HTTPS', $FORCE_HTTPS);

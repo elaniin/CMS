@@ -13,9 +13,11 @@ define('NAME', '$NAME');
 define('SLOGAN', '$SLOGAN');
 define('P_EMAIL', '$P_EMAIL');
 define('LOGO', '$LOGO');
+define('FAVICON', '$FAVICON');
 define('COLOR', '$COLOR');
 define('LANGUAGE', '$LANGUAGE');
 
+define('COPYRIGHT', '$COPYRIGHT');
 define('TIMEZONE', '$TIMEZONE');
 
 define('FORCE_HTTPS', $FORCE_HTTPS);
@@ -130,12 +132,13 @@ $custom_js = file_get_contents("custom/custom.js");
                             <input type="text" class="form-control" name="NAME" value="<?=NAME?>">
                           </div>
                         </div>
-                         <div class="col-md-4">
+                        <div class="col-md-4">
                           <div class="form-group">
                             <label for="input1" class="form-label">Slogan</label>
                             <input type="text" class="form-control" name="SLOGAN" value="<?=SLOGAN?>">
                           </div>
                         </div>
+                        
                       </div>
                       <div class="row">
                         <div class="col-md-4">
@@ -150,14 +153,20 @@ $custom_js = file_get_contents("custom/custom.js");
                             <input type="text" class="form-control" name="LOGO" value="<?=LOGO?>">
                           </div>
                         </div>
-                         <div class="col-md-4">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="input1" class="form-label">Favicon (PNG URL)</label>
+                            <input type="text" class="form-control" name="FAVICON" value="<?=FAVICON?>">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4">
                           <div class="form-group">
                             <label for="input1" class="form-label">Principal Color</label>
                             <input type="text" class="form-control" name="COLOR" value="<?=COLOR?>">
                           </div>
                         </div>
-                      </div>
-                      <div class="row">
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="input1" class="form-label">Language</label>
@@ -166,9 +175,20 @@ $custom_js = file_get_contents("custom/custom.js");
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="input1" class="form-label">Timezone</label>
-                            <input type="text" class="form-control" name="TIMEZONE" value="<?=TIMEZONE?>">
+                            <label for="input1" class="form-label">Copyright</label>
+                            <input type="text" class="form-control" name="COPYRIGHT" value="<?=COPYRIGHT?>">
                           </div>
+                        </div>
+                        
+                        
+                        
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="input1" class="form-label">Timezone</label>
+                              <input type="text" class="form-control" name="TIMEZONE" value="<?=TIMEZONE?>">
+                            </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
@@ -179,7 +199,6 @@ $custom_js = file_get_contents("custom/custom.js");
                             </select> 
                           </div>
                         </div>
-                        
                       </div>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="database">

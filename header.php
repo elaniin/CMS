@@ -7,6 +7,7 @@
   <title><?=NAME?> - <?=SLOGAN?></title>
   <link href="<?=BASE_URL?>/assets/css/root.css" rel="stylesheet">
   <link href="<?=BASE_URL?>/custom/custom.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="<?=FAVICON?>" />
   <style>
     #top {
         background: <?=COLOR?>;

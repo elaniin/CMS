@@ -4,10 +4,10 @@ require_once 'version.php';
 <!-- Start Footer -->
 <div class="row footer">
   <div class="col-md-6 text-left">
-  Developed by <a href="https://elaniin.com" target="_blank">Elaniin Digital</a>. Built using <a href="https://github.com/elaniin/CMS" target="_blank"><?=CMS_NAME?></a>.
+   <?=COPYRIGHT?>
   </div>
   <div class="col-md-6 text-right">
-    Versión <?=CMS_VERSION?>
+    Built using <a href="https://github.com/elaniin/CMS" target="_blank">CMS</a>.
   </div> 
 </div>
 <!-- End Footer -->
