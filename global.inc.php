@@ -35,7 +35,9 @@ include("language/$lan_sele.php");
 
 //connect to the database  
 $db = new DB();  
-$db->connect();  
+$db->connect(); 
+
+mysql_query("SET NAMES 'utf8'"); 
   
 //initialize UserTools object  
 $userTools = new UserTools();  
