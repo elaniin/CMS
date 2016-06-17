@@ -23,7 +23,15 @@
   <div id="top" class="clearfix">
 
     <div class="applogo">
-      <a href="<?=BASE_URL?>" class="logo"><?=NAME?></a>
+      <a href="<?=BASE_URL?>" class="logo">
+        <?php
+          if (HEADER_LOGO == 0) {
+            echo NAME;
+          }else {
+            echo "<img src='".LOGO."' alt='".NAME."' style='width: 59px;margin-top: -19px;'>";
+          }
+        ?>
+      </a>
     </div>
 
     <!-- Start Sidebar Show Hide Button -->

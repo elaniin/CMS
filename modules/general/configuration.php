@@ -22,6 +22,7 @@ define('TIMEZONE', '$TIMEZONE');
 
 define('FORCE_HTTPS', $FORCE_HTTPS);
 define('AUTO_UPDATE', $AUTO_UPDATE);
+define('HEADER_LOGO', $HEADER_LOGO);
 
 //Database Info
 define('DATABASE_NAME', '$DATABASE_NAME'); 
@@ -211,6 +212,17 @@ $update = json_decode($update);
                             <select class="selectpicker form-control" name="AUTO_UPDATE">
                               <option value="1" <?php if (AUTO_UPDATE == 1) { echo "selected"; }?> >Yes</option>
                               <option value="0" <?php if (AUTO_UPDATE == 0) { echo "selected"; }?> >No</option>
+                            </select> 
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="input1" class="form-label">Header Logo</label>
+                            <select class="selectpicker form-control" name="HEADER_LOGO">
+                              <option value="0" <?php if (HEADER_LOGO == 0) { echo "selected"; }?> >Show Name</option>
+                              <option value="1" <?php if (HEADER_LOGO == 1) { echo "selected"; }?> >Show Logo</option>
                             </select> 
                           </div>
                         </div>

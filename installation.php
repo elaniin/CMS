@@ -54,6 +54,7 @@ define('TIMEZONE', '$TIMEZONE');
 
 define('FORCE_HTTPS', $FORCE_HTTPS);
 define('AUTO_UPDATE', $AUTO_UPDATE);
+define('HEADER_LOGO', 0);
 
 //Database Info
 define('DATABASE_NAME', '$DATABASE_NAME'); 
