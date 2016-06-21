@@ -3,7 +3,7 @@
 	$module_name = $lan["users"];
 	$module_order = 1;
 	$module_icon = "user";
-	$module_url = BASE_URL ."m/users/list";
+	$module_url = BASE_URL ."/m/users/list";
 	$module_script = "modules/users/scripts.php";
 	$module_type = "multiple";
 	$module_sublinks[0]["name"] = $lan["users_title"];
