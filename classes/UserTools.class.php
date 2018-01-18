@@ -1,6 +1,6 @@
 <?php  
 //UserTools.class.php  
-  
+
 class UserTools {  
   
     //Log the user in. First checks to see if the   
@@ -9,13 +9,15 @@ class UserTools {
     //and store the user object within.  
     public function login($email, $password)  
     {  
-  
+        $db = new DB();
+        $link = $db->connect();
+
         $hashedPassword = md5($password);  
-        $result = mysql_query("SELECT * FROM users WHERE email = '$email' AND password = '$hashedPassword'");  
+        $result = mysqli_query($link, "SELECT * FROM users WHERE email = '$email' AND password = '$hashedPassword'");  
   
-        if(mysql_num_rows($result) == 1)  
+        if(mysqli_num_rows($result) == 1)  
         {  
-            $_SESSION["user"] = new User(mysql_fetch_assoc($result));  
+            $_SESSION["user"] = new User(mysqli_fetch_assoc($result));  
             $_SESSION["login_time"] = time();  
             $_SESSION["logged_in"] = 1;  
             return true;  
@@ -37,8 +39,11 @@ class UserTools {
     //Check to see if a username exists.  
     //This is called during registration to make sure all user names are unique.  
     public function checkUsernameExists($username) {  
-        $result = mysql_query("select id from users where username='$username'");  
-        if(mysql_num_rows($result) == 0)  
+        $db = new DB();
+        $link = $db->connect();
+
+        $result = mysqli_query($link, "select id from users where username='$username'");  
+        if(mysqli_num_rows($result) == 0)  
         {  
             return false;  
         }else{  
@@ -49,8 +54,11 @@ class UserTools {
     //Check to see if a email exists.  
     //This is called during registration to make sure all email are unique.  
     public function checkEmailExists($email) {  
-        $result = mysql_query("select id from users where email='$email'");  
-        if(mysql_num_rows($result) == 0)  
+        $db = new DB();
+        $link = $db->connect();
+
+        $result = mysqli_query($link, "select id from users where email='$email'");  
+        if(mysqli_num_rows($result) == 0)  
         {  
             return false;  
         }else{  
